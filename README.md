@@ -1,12 +1,13 @@
 # Lunch
 
-This project is a small tool to select a random food truck around the office. Currently the office coordinates are hardcoded at lib/lunch.ex:7 after searching for Este Lauder on Google Maps. The tool accepts an optional distance limit to avoid long travel time when time is limited.
+This project is a small tool to select a random food truck around the office. Currently the office coordinates are hardcoded [here](https://github.com/tsubery/lunch/blob/main/lib/lunch.ex#L7)  The tool accepts an optional distance limit in feet to avoid too much travel.
 
 ## Installation
-Install asdf version manager along with elixir plugin then type `asdf install` followed by `mix deps.get`
+Install [asdf version manager](https://github.com/asdf-vm/asdf) along with [asdf elixir plugin](https://github.com/asdf-vm/asdf-elixir) then type `asdf install` followed by `mix deps.get`
 
 ## Usage
-Run the command `mix run -e Lunch.get_food_trucks` to pick a random food truck or `mix run -e "Lunch.get_food_trucks(2000)"` where 2000 is the the desired radius of the search in feet. Example output:
+Run the command `mix run -e Lunch.get_food_trucks` to pick a random food truck from anywhere in the city or `mix run -e "Lunch.get_food_trucks(2000)"` where 2000 is the the desired radius of the search in feet. 
+Example output:
 ```
 $> mix run -e "Lunch.get_food_trucks(1000)"
 %FoodTruck{
