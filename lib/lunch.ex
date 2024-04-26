@@ -7,7 +7,7 @@ defmodule Lunch do
   @home [37.7868818054959, -122.40709770254514]
   @unlimited -1
 
-  def get_food_trucks(max_distance_feet \\ @unlimited) do
+  def pick_food_truck(max_distance_feet \\ @unlimited) do
     with {:ok, %{status_code: code, body: body}}
          when code in 200..299 <- HTTPoison.get(@data_url) do
       JSON.decode!(body)

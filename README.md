@@ -6,10 +6,10 @@ This project is a small tool to select a random food truck around the office. Cu
 Install [asdf version manager](https://github.com/asdf-vm/asdf) along with [asdf elixir plugin](https://github.com/asdf-vm/asdf-elixir) then type `asdf install` followed by `mix deps.get`
 
 ## Usage
-Run the command `mix run -e Lunch.get_food_trucks` to pick a random food truck from anywhere in the city or `mix run -e "Lunch.get_food_trucks(2000)"` where 2000 is the the desired radius of the search in feet. 
+Run the command `mix run -e Lunch.pick_food_truck` to pick a random food truck from anywhere in the city or `mix run -e "Lunch.pick_food_truck(2000)"` where 2000 is the the desired radius of the search in feet.
 Example output:
 ```
-$> mix run -e "Lunch.get_food_trucks(1000)"
+$> mix run -e "Lunch.pick_food_truck(1000)"
 %FoodTruck{
   name: "San Francisco Street Foods, Inc.",
   type: "Push Cart",
@@ -20,7 +20,6 @@ $> mix run -e "Lunch.get_food_trucks(1000)"
   lng: "-122.40557905421024"
 }
 ```
-
 
 ## Tests
 To run test use `mix test`. The test for successful search has the nearest truck hardcoded, that may change in the future.
